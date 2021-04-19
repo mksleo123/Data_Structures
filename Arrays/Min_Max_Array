@@ -1,0 +1,31 @@
+linear searching in order n
+
+package com.company;
+
+import java.util.Arrays;
+
+public class Main {
+     static int[] minmax(int arr[], int size){
+        int max=arr[0];
+        int min=arr[0];
+        for(int i=0;i<size;i++){
+            if(arr[i]>max)
+                max=arr[i];
+            else if(arr[i]<min)
+                min=arr[i];
+        }
+        int ans[]={max, min};
+        return ans;
+    }
+    public static void Printarray(int arr[],int size){
+        for(int i=0;i<size;i++){
+            System.out.println(arr[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4, 10, 6};
+        int arr2[]=minmax(arr,6);
+        Printarray(arr2,2);
+    }
+}
