@@ -1,0 +1,58 @@
+First way for union
+
+package com.company;
+
+import java.util.HashSet;
+import java.util.Set;
+
+class Main {
+    public static void main(String[] args) {
+
+        // create first set
+        Set<Integer> primeNumbers = new HashSet<>();
+        primeNumbers.add(2);
+        primeNumbers.add(3);
+        System.out.println("Prime Numbers: " + primeNumbers);
+
+        // create second set
+        Set<Integer> evenNumbers = new HashSet<>();
+        evenNumbers.add(2);
+        evenNumbers.add(4);
+        System.out.println("Even Numbers: " + evenNumbers);
+
+        // union of two sets
+        evenNumbers.addAll(primeNumbers);
+        Object[] arr = evenNumbers.toArray();
+        System.out.println("union: " + Arrays.toString(arr));
+    }
+}
+
+for intersection
+
+import java.util.HashSet; \\sortedset
+import java.util.Set;
+
+class Main {
+  public static void main(String[] args) {
+
+    // create first set
+    Set<Integer> primeNumbers = new HashSet<>();
+    primeNumbers.add(2);
+    primeNumbers.add(3);
+    System.out.println("Prime Numbers: " + primeNumbers);
+
+    // create second set
+    Set<Integer> evenNumbers = new HashSet<>();
+    evenNumbers.add(2);
+    evenNumbers.add(4);
+    System.out.println("Even Numbers: " + evenNumbers);
+
+    // Intersection of two sets
+    evenNumbers.retainAll(primeNumbers);
+        Object[] arr = evenNumbers.toArray();
+        System.out.println("intersection: " + Arrays.toString(arr));
+  }
+}
+
+
+
