@@ -1,0 +1,20 @@
+class Solution {
+    public int findDuplicate(int[] nums) {
+        int i;
+         int j =0;
+        for (i = 0; i < nums.length; i++) {
+             j = Math.abs(nums[i]);
+            if (nums[j] >= 0)
+                nums[j] = -nums[j];
+            else
+                return j;
+                
+        }
+    return j;
+}
+}
+
+
+Traverse the array from start to end.
+For every element,take its absolute value and if the abs(array[i])‘th element is positive, the element has not encountered before, else if negative the element has been encountered before print the absolute value of the current element.
+
